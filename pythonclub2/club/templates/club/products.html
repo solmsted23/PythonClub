@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+<!--This is a comment-->
+
+<h2>Products</h2>
+<ul>
+    {% for p in product_list %}
+      <li> {{ p.productname }}</li>
+    {% endfor %}
+</ul>
+<p>Under construction</p>
+
+{% endblock %}
