@@ -36,7 +36,15 @@ class Resource(models.Model):
     url=models.URLField
     dateentered=models.DateField
     user=models.ForeignKey(User, on_delete=models.DO_NOTHING)
-    description=models.TextField
+    description=models.TextField()
+
+    def discountAmount(self):
+        self.discount=self.price * .05
+        return self.discount
+
+    def discountPrice(self):
+        disc=self.discountAmount()
+        self.discountPrice=self.price-self.disc
 
 def __str__(self):
     return self.resourcename
