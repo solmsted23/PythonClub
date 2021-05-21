@@ -6,6 +6,7 @@
 <ul>
     {% for p in product_list %}
       <li> {{ p.productname }}</li>
+      <li><a href="{% url 'detail' id=p.product.id %}"> {{p.productname}}></a></li>
     {% endfor %}
 </ul>
 <p>Under construction</p>
